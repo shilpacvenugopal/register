@@ -16,7 +16,7 @@ Follow these steps to set up the User Management System project on your local ma
 
  ```bash
    git clone https://github.com/shilpacvenugopal/register.git
-   cd registeruser
+   cd register/
    ```
 
 2. **Create a Virtual Environment:**
