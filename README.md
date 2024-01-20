@@ -16,6 +16,8 @@ Follow these steps to set up the User Management System project on your local ma
 
  ```bash
    git clone https://github.com/shilpacvenugopal/register.git
+   ```
+```bash
    cd register/
    ```
 
