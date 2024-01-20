@@ -61,8 +61,6 @@ Follow these steps to set up the User Management System project on your local ma
    python manage.py runserver
    ```
 
-   The project will be accessible at [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
-
 8. **Access the  Interface:**
 
    Visit [http://127.0.0.1:8000/dashboard/register/](http://127.0.0.1:8000/dashboard/register/) and register a user. After successfull registeration it will redirect to login page
