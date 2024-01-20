@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var email = document.forms["loginForm"]["email"].value;
+            var password = document.forms["loginForm"]["password"].value;
+
+            if (email === "") {
+                alert("Please enter your email.");
+                return false;
+            }
+
+            if (password === "") {
+                alert("Please enter your password.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Login</h2>
+
+    <form name="loginForm" onsubmit="return validateForm()" method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+    </div>
+    <br>
+
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+    </div>
+
+    <br>
+
+    <button type="submit">Login</button>
+
+    {% if error_message %}
+        <p class="error">{{ error_message }}</p>
+    {% endif %}
+
+    </form>
+</body>
+</html>

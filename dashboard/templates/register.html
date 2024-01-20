@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+     <form method="post" action="{% url 'register' %}">
+    {% csrf_token %}
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+    </div>
+    <br>
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+    </div>
+    <br>
+
+    <div>
+        <label for="role">Role:</label>
+        <select name="role" required>
+            <option value="student">Student</option>
+            <option value="staff">Staff</option>
+            <option value="admin">Admin</option>
+            <option value="editor">Editor</option>
+        </select>
+    </div>
+    <br>
+
+    <div>
+        <label for="country">Country:</label>
+        <input type="text" name="country" required>
+    </div>
+    <br>
+
+    <div>
+        <label for="nationality">Nationality:</label>
+        <input type="text" name="nationality" required>
+    </div>
+    <br>
+
+    <div>
+        <label for="mobile">Mobile:</label>
+        <input type="text" name="mobile" required>
+    </div>
+    <br>
+
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+    </div>
+    <br>
+
+    <button type="submit">Register</button>
+         {% if error_message %}
+        <p class="error">{{ error_message }}</p>
+    {% endif %}
+</form>
+
+</body>
+</html>
