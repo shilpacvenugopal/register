@@ -15,8 +15,8 @@ Follow these steps to set up the User Management System project on your local ma
 1. **Clone the Repository:**
 
    ```bash
-   [git clone https://github.com/shilpacvenugopal/real_estate_managementsystem.git](https://github.com/shilpacvenugopal/register.git)
-   cd registeruser
+git clone https://github.com/shilpacvenugopal/register.git 
+cd registeruser
    ```
 
 2. **Create a Virtual Environment:**
